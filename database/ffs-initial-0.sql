@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   `email_activation_key` varchar(36) DEFAULT NULL,
   `logo` varchar(512) DEFAULT NULL,
   PRIMARY KEY (`twitch_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -54,7 +54,7 @@ CREATE TABLE IF NOT EXISTS `account_event_status` (
   `email_activation_key` varchar(36) NOT NULL,
   KEY `account_id` (`account_id`),
   KEY `event_id` (`event_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -68,7 +68,7 @@ CREATE TABLE IF NOT EXISTS `auth_tokens` (
   `last_used_timestamp` bigint(20) NOT NULL,
   PRIMARY KEY (`token`),
   KEY `account_id` (`account_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -85,7 +85,7 @@ CREATE TABLE IF NOT EXISTS `events` (
   `reserved_to_partners` tinyint(1) NOT NULL,
   `is_current` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
 
 -- --------------------------------------------------------
 
@@ -98,7 +98,7 @@ CREATE TABLE IF NOT EXISTS `event_rounds` (
   `round_id` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`round_id`),
   KEY `event_id` (`event_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=34 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=34 ;
 
 -- --------------------------------------------------------
 
@@ -112,7 +112,7 @@ CREATE TABLE IF NOT EXISTS `round_scores` (
   `score` int(11) NOT NULL,
   KEY `round_id` (`round_id`),
   KEY `account_id` (`account_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Contraintes pour les tables exportées
