@@ -24,7 +24,7 @@ cd ApiLib && mvn install
 Then, clone and build the project
 
 ```bash
-git clone https://github.com/AlexMog/FFS-Api.git
+git clone https://github.com/FightForSub/FFS-Api.git
 cd FFS-Api && mvn compile assembly:single
 ```
 
